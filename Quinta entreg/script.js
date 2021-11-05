@@ -22,7 +22,7 @@ const producto4 = {
     cantidadstock: 50,
     precio: 2500,
 }
-const producto_modif = {
+let producto_modif = {
 
 }
 class producto {
@@ -34,23 +34,17 @@ class producto {
     }
 }
 function cambiarproducto(producto_x) {
-    let opcion_cambiarproducto = Number(prompt(`Que atributo desea modificar? Elija el numero de opcion 
-    1- Nombre 
-    2- Cantidad de stock
-    3- precio`))
-    switch (opcion_cambiarproducto) {
-        case 1:
-            producto_x.nombre = prompt('Ingrese el nuevo nombre del producto')
-            producto_modif = producto_x
-            return producto_modif
-        case 2:
-            producto1.cantidadstock = prompt('Ingrese la nueva cantidad de stock')
-            producto_modif = producto_x
-            return producto_modif
-        case 3:
-            producto1.precio = prompt('Ingrese el nuevo precio')
-            producto_modif = producto_x
-            return producto_modif
+    let opcion_cambiarproducto = (prompt(`Que atributo desea modificar?  
+    - Nombre 
+    - Cantidad de stock
+    - precio`)).toLowerCase
+    if (producto_x[opcion_cambiarproducto] !== null) {
+        producto_modif = producto_x
+        producto_modif[opcion_cambiarproducto] = prompt(`Ingrese el nuevo valor`)
+        return producto_modif
+    } else {
+        alert("No existe ese atributo")
+        return producto_x
     }
 }
 alert('Bienvenido al sistema de actualizacion de productos de nuestra empresa')
@@ -68,30 +62,34 @@ if (opcion === 1) {
     console.log(_precio)
     console.log(producto5)
 } else {
-    let opcion_producto = prompt(`Que producto desea modificar? 
+    let opcion_producto = Number(prompt(`Que producto desea modificar? 
     1- ${producto1.nombre}
     2- ${producto2.nombre}
     3- ${producto3.nombre}
-    4- ${producto4.nombre} `)
+    4- ${producto4.nombre} `))
+    let producto_x
+    let cambio
     switch (opcion_producto) {
         case 1:
-            let producto_x = producto1
-            let cambio = cambiarproducto()
+            producto_x = producto1
+            cambio = cambiarproducto(producto_x)
             console.log(cambio)
             break;
         case 2:
-            let producto_x = producto2
-            let cambio = cambiarproducto()
+            producto_x = producto2
+            cambio = cambiarproducto(producto_x)
             console.log(cambio)
             break;
         case 3:
-            let producto_x = producto3
-            let cambio = cambiarproducto()
+            producto_x = producto3
+            cambio = cambiarproducto(producto_x)
             console.log(cambio)
+            break;
         case 4:
-            let producto_x = producto4
-            let cambio = cambiarproducto()
+            producto_x = producto4
+            cambio = cambiarproducto(producto_x)
             console.log(cambio)
+            break;
     }
 }
 
