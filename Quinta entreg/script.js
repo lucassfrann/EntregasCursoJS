@@ -1,30 +1,14 @@
-const producto1 = {
-    nombre: 'Maquina Pro B-Way',
-    stock: true,
-    cantidadstock: 45,
-    precio: 4500,
-}
-const producto2 = {
-    nombre: 'Maquina Afeitadora Profesional Wahl',
-    stock: true,
-    cantidadstock: 30,
-    precio: 3000,
-}
-const producto3 = {
-    nombre: 'Patillera Kemei 1971 ',
-    stock: true,
-    cantidadstock: 15,
-    precio: 5000,
-}
-const producto4 = {
-    nombre: 'Kit Tijeras',
-    stock: true,
-    cantidadstock: 50,
-    precio: 2500,
-}
 let producto_modif = {
 
 }
+
+const ListaProducto = [ 
+    {nombre: 'Maquina Pro B-Way', stock: true, cantidadstock: 45,precio: 4500,},                    
+    {nombre: 'Maquina Afeitadora Profesional Wahl',stock: true,cantidadstock: 30,precio: 3000,}, 
+    {nombre: 'Patillera Kemei 1971 ',stock: true,cantidadstock: 15,precio: 5000,}, 
+    {nombre: 'Kit Tijeras',stock: true,cantidadstock: 50,precio: 2500,},
+]
+
 class producto {
     constructor(_nombre, _stock, _cantidadstock, _precio) {
         this.nombre = _nombre;
@@ -56,17 +40,11 @@ if (opcion === 1) {
     let _stock = true
     let _cantidadstock = Number(prompt('Ingrese la cantidad stock'))
     let _precio = Number(prompt('Ingrese el precio'))
-    const producto5 = new producto(_nombre, _stock, _cantidadstock, _precio)
-    console.log(_nombre)
-    console.log(_cantidadstock)
-    console.log(_precio)
-    console.log(producto5)
+    let producto = {nombre: _nombre, _stock: _stock, _cantidadstock: _cantidadstock, precio: _precio,}
+    ListaProducto.push(producto)
 } else {
     let opcion_producto = Number(prompt(`Que producto desea modificar? 
-    1- ${producto1.nombre}
-    2- ${producto2.nombre}
-    3- ${producto3.nombre}
-    4- ${producto4.nombre} `))
+    ${ListaProducto} `))
     let producto_x
     let cambio
     switch (opcion_producto) {

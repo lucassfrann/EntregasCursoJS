@@ -6,32 +6,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Five barber web site</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <section class="header-container">
-            <a class="header-logo">
-            </a>
+            <div class="header-logo">
+                <a href=""><img src="Imagenes/logo.jpg"></a>
+            </div>
             <h1 class="header-titulo">Five 5 barber</h1>
-            <nav>
-                <ul class="header-nav">
-                    <li><a href=""> Encontranos </a></li>
-                    <li><a href="">Reserva tu turno</a></li>
-                    <li><a href="">Nuestros precios</a></li>
-                    <li><a href="">Productos</a></li>
-                </ul>
+            <nav class="header-nav">
+                <a href="html/encontranos.html"> Encontranos </a>
+                <a href="html/reserva.html">Reserva tu turnos</a>
+                <a href="html/precios.html">Nuestros precis</a>
+                <a href="html/productos.html">Productos</a>
             </nav>
     </header>
 
     <main>
-        <section class="main-container">
-            <div class="main-titulo">
-                <h1>Que es five barber</h1>
+        <section class="main-container">           
+            <div class="main-container-content">
+            <h1 class="main-container-title">Que es five barber</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat impedit voluptas recusandae placeat?
+                Natus sunt ipsam vel ex ad voluptatum nihil, eligendi commodi officiis eum culpa non, explicabo quam
+                neque enim libero architecto totam? Fugiat temporibus nemo, non fugit voluptates molestias. Perspiciatis
+                nisi odit in aut neque ducimus saepe sunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat impedit voluptas recusandae placeat?
+                Natus sunt ipsam vel ex ad voluptatum nihil, eligendi commodi officiis eum culpa non, explicabo quam
+                eque enim libero architecto totam? Fugiat temporibus nemo, non fugit voluptates molestias. Perspiciatis
+                nisi odit in aut neque ducimus saepe sunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat impedit voluptas recusandae placeat?
+                Natus sunt ipsam vel ex ad voluptatum nihil, eligendi commodi officiis eum culpa non, explicabo quam
+                neque enim libero architecto totam? Fugiat temporibus nemo, non fugit voluptates molestias. Perspiciatis
+                nisi odit in aut neque ducimus saepe sunt.</p>
             </div>
-            <div class="main-galeria">
+            <div id="galeria-slider">
+                <ul class="slider">
+                    <li id="slide1">
+                        <img src="Imagenes/foto2.jpg" />
+                    </li>
+                    <li id="slide2">
+                        <img src="Imagenes/foto1.jpg" />
+                    </li>
+                    <li id="slide3">
+                        <img src="Imagenes/foto3.jpg" />
+                    </li>
+                </ul>
+                <ul class="menu">
+                    <li>
+                        <a href="#slide1">1</a>
+                    </li>
+                    <li>
+                        <a href="#slide2">2</a>
+                    </li>
+                    <li>
+                        <a href="#slide3">3</a>
+                    </li>
+                </ul>
             </div>
-        </section>
     </main>
 
     <footer>
@@ -47,7 +89,17 @@
                 </nav>
             </div>
             <div class="footer-logo"></div>
-            <div class="footer-contacto"></div>
+            <div class="footer-contacto">
+                <div class="footer-contact">
+                    <h4> Telefono </h4>
+                    <p>12312356</p>
+                </div>
+                <div class="footer-contact">
+                    <h4> Email </h4>
+                    <p>asdf@gmail.com</p>
+                </div>
+            </div>
+            </div>
         </section>
     </footer>
     <script src="script.js"></script>
