@@ -3,10 +3,10 @@ let producto_modif = {
 }
 
 const ListaProducto = [ 
-    {nombre: 'Maquina Pro B-Way', stock: true, cantidadstock: 45,precio: 4500,},                    
-    {nombre: 'Maquina Afeitadora Profesional Wahl',stock: true,cantidadstock: 30,precio: 3000,}, 
-    {nombre: 'Patillera Kemei 1971 ',stock: true,cantidadstock: 15,precio: 5000,}, 
-    {nombre: 'Kit Tijeras',stock: true,cantidadstock: 50,precio: 2500,},
+    {nombre: 'Maquina Pro B-Way', stock: true, cantidadstock: 45,precio: 4500},                    
+    {nombre: 'Maquina Afeitadora Profesional Wahl',stock: true,cantidadstock: 30,precio: 3000}, 
+    {nombre: 'Patillera Kemei 1971 ',stock: true,cantidadstock: 15,precio: 5000}, 
+    {nombre: 'Kit Tijeras',stock: true,cantidadstock: 50,precio: 2500},
 ]
 
 function cambiarproducto(narray) {

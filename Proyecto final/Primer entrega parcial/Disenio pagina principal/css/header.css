@@ -9,6 +9,10 @@
     position: relative;
 }
 
+.header img {
+    max-height: 160px;
+}
+
 .header-container {
     display: flex;
     justify-content: space-between;
