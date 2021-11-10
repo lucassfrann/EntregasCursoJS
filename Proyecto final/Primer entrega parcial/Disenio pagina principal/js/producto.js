@@ -6,9 +6,12 @@ const ListaProducto = [
 
 let Carrito = []
 
-function Sumaprecios(opcionwhile)
-if (opcionwhile == 1) {
-    alert('Hasta el momento el total de su compra es de ')
+function Sumaprecios(opcionwhile) {
+    if (opcionwhile == 1) {
+        Carrito.push(ListaProducto[i])
+        let precioparcial = Carrito.map(ListaProducto => ListaProducto.precio).reduce((a,b) => a+b, 0) 
+        alert(`Hasta el momento el total de su compra es de ${precioparcial} `)   
+    }
 }
 
 
@@ -22,34 +25,48 @@ let opcionproducto = Number(prompt(`Bienvenido a Five Barber, que producto desea
 3-Cera Hairstyle
 4-Salir`))
 
-
+let opcionwhile
+let i
 do {
+
     switch (opcionproducto) {
-        case 1: 
-           let i = 0
+        case 1:         
+           i = 0
            alert(`Excelente decision!, El precio del producto es de ${ListaProducto[0].precio}`)
            Sumaprecios(opcionwhile);
+           break;
            
         case 2:
-            let i = 1
+            i = 1
             alert(`Excelente decision!, El precio del producto es de ${ListaProducto[1].precio}`)
             Sumaprecios(opcionwhile);
+            break;
 
 
         case 3:
-            let i = 2
+            i = 2
             alert(`Excelente decision!, El precio del producto es de ${ListaProducto[2].precio}`)
             Sumaprecios(opcionwhile);
+            break;
   
         case 4:
             break;
     }
 
-    if (opcionproducto ==! 4) {
-        let opcionwhile = Number(prompt(`Desea agregar otro producto al carrito? Elija el numero de opcion
+    if (opcionproducto !== 4) {
+        opcionwhile = Number(prompt(`Desea agregar otro producto al carrito? Elija el numero de opcion
     1-Si
     2-No`))
+
+    if (opcionwhile == 1) {
+        opcionproducto = Number(prompt(`Que producto desea agregar al carrito? Escriba el numero de opcion
+        1-Polvo matizador
+        2-Desamarillador
+        3-Cera Hairstyle
+        4-Salir`))  
     }
+    }
+
 
 } while ( opcionwhile == 1);
 
