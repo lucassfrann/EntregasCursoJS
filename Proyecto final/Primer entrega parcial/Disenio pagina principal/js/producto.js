@@ -28,6 +28,7 @@ let opcionproducto = Number(prompt(`Bienvenido a Five Barber, que producto desea
 let opcionwhile
 let i
 do {
+    opcionwhile = 1
 
     switch (opcionproducto) {
         case 1:         
@@ -54,9 +55,10 @@ do {
     }
 
     if (opcionproducto !== 4) {
+        opcionwhile = 0
         opcionwhile = Number(prompt(`Desea agregar otro producto al carrito? Elija el numero de opcion
     1-Si
-    2-No`))
+    2-No`)) 
 
     if (opcionwhile == 1) {
         opcionproducto = Number(prompt(`Que producto desea agregar al carrito? Escriba el numero de opcion
