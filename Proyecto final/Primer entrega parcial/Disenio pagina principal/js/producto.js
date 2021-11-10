@@ -51,6 +51,7 @@ do {
             break;
   
         case 4:
+            opcionwhile = 0
             break;
     }
 
