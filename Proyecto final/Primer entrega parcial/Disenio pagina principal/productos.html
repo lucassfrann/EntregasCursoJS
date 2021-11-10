@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Five barber web site</title>
+    <title>Productos five barber</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/mainproductos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
@@ -17,65 +16,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <header class="header">
         <section class="header-container">
             <div class="header-logo">
-                <a href=""><img src="Imagenes/logo.jpg"></a>
+                <a href="index.html" class="logo"><img src="Imagenes/logo.jpg"></a>
             </div>
             <h1 class="header-titulo">Five 5 barber</h1>
             <nav class="header-nav">
                 <a href="encontranos.html"> Encontranos </a>
-                <a href="/reserva.html">Reserva tu turno</a>
+                <a href="reserva.html">Reserva tu turno</a>
                 <a href="precios.html">Nuestros precios</a>
                 <a href="productos.html">Productos</a>
             </nav>
     </header>
-
     <main>
-        <section class="main-container">  
-            <div id="galeria-slider">
-                <ul class="slider">
-                    <li id="slide1">
-                        <img src="Imagenes/foto2.jpg" />
-                    </li>
-                    <li id="slide2">
-                        <img src="Imagenes/foto1.jpg" />
-                    </li>
-                    <li id="slide3">
-                        <img src="Imagenes/foto3.jpg" />
-                    </li>
-                </ul>
-                <ul class="menu">
-                    <li>
-                        <a href="#slide1">1</a>
-                    </li>
-                    <li>
-                        <a href="#slide2">2</a>
-                    </li>
-                    <li>
-                        <a href="#slide3">3</a>
-                    </li>
-                </ul>
-            </div>         
-            <div class="main-container-content">
-            <h1 class="main-container-title">Que es five barber</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat impedit voluptas recusandae placeat?
-                Natus sunt ipsam vel ex ad voluptatum nihil, eligendi commodi officiis eum culpa non, explicabo quam
-                neque enim libero architecto totam? Fugiat temporibus nemo, non fugit voluptates molestias. Perspiciatis
-                nisi odit in aut neque ducimus saepe sunt.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat impedit voluptas recusandae placeat?
-                Natus sunt ipsam vel ex ad voluptatum nihil, eligendi commodi officiis eum culpa non, explicabo quam
-                eque enim libero architecto totam? Fugiat temporibus nemo, non fugit voluptates molestias. Perspiciatis
-                nisi odit in aut neque ducimus saepe sunt.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat impedit voluptas recusandae placeat?
-                Natus sunt ipsam vel ex ad voluptatum nihil, eligendi commodi officiis eum culpa non, explicabo quam
-                neque enim libero architecto totam? Fugiat temporibus nemo, non fugit voluptates molestias. Perspiciatis
-                nisi odit in aut neque ducimus saepe sunt.</p>
+        <div class="main-title">
+            <h1>Nuestros productos</h1>
+        </div>
+        <section class="main-container">
+            <div class="main-container-productos">
+                <h1>Polvo matizador</h1>
+                <img src="imagenes/stardust.png">
+                <p><b>Precio</b></p>
             </div>
+            <div class="main-container-productos">
+                <h1>Desamarillador</h1>
+                <img src="imagenes/desamarillador.png">
+                <p><b>Precio</b></p>
+            </div>
+            <div class="main-container-productos">
+                <h1>Hairstyle</h1>
+                <img src="imagenes/cera.png">
+                <p><b>Precio</b></p>
+            </div>
+        </section>
     </main>
-
     <footer>
         <section class="footer-container">
             <div class="footer-content">
@@ -111,5 +87,4 @@
     </footer>
     <script src="script.js"></script>
 </body>
-
 </html>

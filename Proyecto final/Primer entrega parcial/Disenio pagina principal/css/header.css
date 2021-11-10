@@ -20,12 +20,12 @@
     width: 100%;
     height: 100%;
     border: solid;
-    /* border-color: red; */
+
 }
 
 .header-logo {
     border: solid;
-    /* border-color: green; */
+
 }
 
 .header-titulo {
@@ -33,14 +33,12 @@
     font-size: 30px;
     font-family: 'Permanent Marker', cursive;
     color: white;
-    /* border: solid; */
-    /* border-color: blue; */
+
 }
 
 .header-nav {
     padding: 56px;
     border: solid;
-    /* border-color: yellow; */
 }
 
 .header-nav a {

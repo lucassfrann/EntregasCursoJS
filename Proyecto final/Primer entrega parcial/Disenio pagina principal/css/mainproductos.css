@@ -1,0 +1,45 @@
+main {
+    background-color: grey;
+}
+
+.main-container {
+    max-width: 900px;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 50px auto 50px auto;
+}
+
+.main-title {
+    display: block;
+    text-align: center;
+    margin: 30px 0px 30px 0px;
+    font-family: Oswald;
+    font-size: 25px;
+}
+
+.main-container-productos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+    margin: 20px;
+    height: 330px;
+    font-family: Oswald;
+}
+
+.main-container-productos p {
+    margin: 5px;
+    font-family: Oswald;
+    font-size: 30px;
+}
+
+
+
+
+.main-container-productos img {
+    width: 250px;
+    height: 250px;
+}
