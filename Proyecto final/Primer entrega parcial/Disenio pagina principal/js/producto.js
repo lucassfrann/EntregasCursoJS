@@ -6,14 +6,27 @@ const ListaProducto = [
 
 let Carrito = []
 
-function Sumaprecios(opcionwhile) {
-    if (opcionwhile == 1) {
-        Carrito.push(ListaProducto[i])
-        let precioparcial = Carrito.map(ListaProducto => ListaProducto.precio).reduce((a,b) => a+b, 0) 
-        alert(`Hasta el momento el total de su compra es de ${precioparcial} `)   
-    }
+function actualizarcarrito(i) {
+    Carrito.push(ListaProducto[i])
+    let obJSON = JSON.stringify(Carrito)
+    localStorage.setItem(`Productos`, obJSON)
+    
 }
 
+function Sumaprecios(opcionwhile) {
+    if (opcionwhile == 1) {
+        let precioparcial = Carrito.map(ListaProducto => ListaProducto.precio).reduce((a,b) => a+b, 0) 
+        const ul = document.querySelector(".carrito-productos")
+        ul.innerHTML = ""
+        let carrito = document.createElement("li")
+        li.textcontent = `Producto: ${ListaProducto[i].nombre} $ ${ListaProducto[i].precio}`
+        ul.appendChild(li)
+        p.innerHTML = ""
+        const p = document.querySelector(".carrito-preciofinal")
+        p.textcontent = (`${precioparcial}`)
+
+    }
+}
 
 function arrcarrito(precio) {
 
@@ -27,20 +40,23 @@ let opcionproducto = Number(prompt(`Bienvenido a Five Barber, que producto desea
 
 let opcionwhile
 let i
+let k = 0
 do {
     opcionwhile = 1
-
+    k++
     switch (opcionproducto) {
         case 1:         
            i = 0
            alert(`Excelente decision!, El precio del producto es de ${ListaProducto[0].precio}`)
            Sumaprecios(opcionwhile);
+           actualizarcarrito(i);
            break;
            
         case 2:
             i = 1
             alert(`Excelente decision!, El precio del producto es de ${ListaProducto[1].precio}`)
             Sumaprecios(opcionwhile);
+            actualizarcarrito(i);
             break;
 
 
@@ -48,6 +64,7 @@ do {
             i = 2
             alert(`Excelente decision!, El precio del producto es de ${ListaProducto[2].precio}`)
             Sumaprecios(opcionwhile);
+            actualizarcarrito(i);
             break;
   
         case 4:
