@@ -3,8 +3,6 @@ main {
 }
 
 .main-container {
-    max-width: 900px;
-    height: 600px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -40,4 +38,9 @@ main {
     width: 250px;
     height: 250px;
     border: 1px solid black;
+}
+
+.main-container-carrito img {
+    max-width: 100px;
+    max-height: 100px;
 }
