@@ -1,3 +1,5 @@
+//--------------------------------------------------OBJETOS------------------------------//
+
 const ListaProducto = [{
         nombre: 'Polvo Matizador',
         stock: true,
@@ -20,6 +22,8 @@ const ListaProducto = [{
 
 let Carrito = []
 
+//--------------------------------------------------FUNCIONES------------------------------//
+
 function agregarProductoAlCarrito(producto) {
     Carrito.push(producto)
     let obJSON = JSON.stringify(Carrito)
@@ -28,6 +32,7 @@ function agregarProductoAlCarrito(producto) {
     let li = document.createElement("li")
     li.textContent = `Producto: ${producto.nombre} $ ${producto.precio}`
     ul.appendChild(li)
+    actualizarPrecioFinal()
 }
 
 function actualizarPrecioFinal() {
@@ -37,58 +42,28 @@ function actualizarPrecioFinal() {
     p.textContent = (`Total : ${precioparcial}`)
 }
 
-function arrcarrito(precio) {
+function vaciarCarrito() {
+    localStorage.clear()
+    let ul = document.querySelector(".carrito-productos")
+    ul.innerHTML = ""
+    total = document.querySelector(".carrito-preciofinal")
+    total.innerHTML = "0 productos"
+}
+
+function arrCarrito(precio) {
 
 }
 
-if (localStorage.Productos) {
-    const carritoInicial = JSON.parse(localStorage.Productos);
-    carritoInicial.forEach(producto => agregarProductoAlCarrito(producto))
-    actualizarPrecioFinal()
+
+
+//--------------------------------------------------CONDICIONALES Y DEMAS------------------------------//
+
+let botones = document.getElementsByClassName("boton-agregar-producto");
+
+let tachocarrito = document.querySelector(".main-container-delete")
+
+tachocarrito.addEventListener("click", vaciarCarrito)
+
+for (let i = 0; i < botones.length; i++) {
+    botones[i].addEventListener('click', () => agregarProductoAlCarrito(ListaProducto[i]));
 }
-
-let opcionproducto = Number(prompt(`Bienvenido a Five Barber, que producto desea comprar? Escriba el numero de opcion
-1-Polvo matizador
-2-Desamarillador
-3-Cera Hairstyle
-4-Salir`))
-
-let opcionwhile = true;
-let i
-let k = 0
-do {
-    k++
-    switch (opcionproducto) {
-        case 1:
-        case 2:
-        case 3:
-            const producto = ListaProducto[opcionproducto - 1]
-            alert(`Excelente decision!, El precio del producto es de ${ListaProducto[0].precio}`)
-            agregarProductoAlCarrito(producto);
-            actualizarPrecioFinal(opcionwhile);
-            break;
-
-        default:
-            opcionwhile = 0
-            break;
-    }
-
-    if (opcionproducto !== 4) {
-        opcionwhile = 0
-        opcionwhile = Number(prompt(`Desea agregar otro producto al carrito? Elija el numero de opcion
-    1-Si
-    2-No`))
-
-        if (opcionwhile == 1) {
-            opcionproducto = Number(prompt(`Que producto desea agregar al carrito? Escriba el numero de opcion
-        1-Polvo matizador
-        2-Desamarillador
-        3-Cera Hairstyle
-        4-Salir`))
-        }
-    }
-
-
-} while (opcionwhile == 1);
-
-alert('Gracias por su compra en Five Barber')
