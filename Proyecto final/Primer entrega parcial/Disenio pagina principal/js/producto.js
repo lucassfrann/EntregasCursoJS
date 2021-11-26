@@ -46,7 +46,7 @@ function vaciarCarrito() {
     localStorage.clear()
     let ul = document.querySelector(".carrito-productos")
     ul.innerHTML = ""
-    total = document.querySelector(".carrito-preciofinal")
+    let total = document.querySelector(".carrito-preciofinal")
     total.innerHTML = "0 productos"
 }
 
@@ -57,6 +57,7 @@ function arrCarrito(precio) {
 
 
 //--------------------------------------------------CONDICIONALES Y DEMAS------------------------------//
+
 
 let botones = document.getElementsByClassName("boton-agregar-producto");
 
