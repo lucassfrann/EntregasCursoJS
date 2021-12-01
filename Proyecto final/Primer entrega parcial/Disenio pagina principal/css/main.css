@@ -1,7 +1,7 @@
 .main-container {
     display: flex;
     flex-direction: row;
-    background-color: grey;
+    background-image: url(../Imagenes/fondoproductos.jpg);
 }
 
 .main-container-content {
@@ -16,7 +16,7 @@
 }
 
 #galeria-slider {
-    border: solid;
+    border: solid 0.5px white;
     font-family: sans-serif;
     margin: 50px;
     padding: 15px;

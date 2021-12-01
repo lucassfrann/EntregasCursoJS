@@ -1,5 +1,7 @@
 main {
-    background-color: grey;
+    background-image: url(../Imagenes/fondoproductos.jpg);
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .main-container {
@@ -7,15 +9,36 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 50px auto 50px auto;
+    min-height: 700px;
 }
 
 .main-title {
-    display: block;
+    display: flex;
     text-align: center;
-    margin: 30px 0px 30px 0px;
+    margin: 30px;
     font-family: Oswald;
-    font-size: 25px;
+    text-shadow: 1px 0 0 #fff, 1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    font-size: 55px;
+}
+
+.main-container-carrito img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.main-container-delete {
+    display: flex;
+    width: 50px;
+    height: 50px;
+}
+
+.main-container-delete img:hover {
+    background-color: #404143;
+}
+
+.main-container-carrito ul li {
+    text-decoration: none;
+    color: #fff;
 }
 
 .main-container-productos {
@@ -48,29 +71,11 @@ main {
 .main-container-productos-mas img {
     margin: 5px;
     display: flex;
+    border: none;
     width: 40px;
-    height: 40px;
+    height: 50px;
 }
 
 .main-container-productos-mas img:hover {
     background-color: #404143;
-}
-
-.main-container-carrito img {
-    max-width: 100px;
-    max-height: 100px;
-}
-
-.main-container-delete {
-    display: flex;
-    width: 50px;
-    height: 50px;
-}
-
-.main-container-delete img:hover {
-    background-color: #404143;
-}
-
-.main-container-carrito ul li {
-    text-decoration: none;
 }

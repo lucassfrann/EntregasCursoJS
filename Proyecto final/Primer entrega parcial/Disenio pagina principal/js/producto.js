@@ -40,10 +40,12 @@ function actualizarPrecioFinal() {
     p.innerHTML = ""
     let precioparcial = Carrito.map(producto => producto.precio).reduce((a, b) => a + b, 0)
     p.textContent = (`Total : ${precioparcial}`)
+    return precioparcial
 }
 
 function vaciarCarrito() {
     localStorage.clear()
+    Carrito.splice(0)
     let ul = document.querySelector(".carrito-productos")
     ul.innerHTML = ""
     let total = document.querySelector(".carrito-preciofinal")
@@ -62,6 +64,12 @@ function arrCarrito(precio) {
 let botones = document.getElementsByClassName("boton-agregar-producto");
 
 let tachocarrito = document.querySelector(".main-container-delete")
+
+let precios = document.getElementsByClassName("precio-producto");
+
+for (let index = 0; index < precios.length; index++) {
+    precios[index].innerHTML = `$${ListaProducto[index].precio}`
+}
 
 tachocarrito.addEventListener("click", vaciarCarrito)
 
