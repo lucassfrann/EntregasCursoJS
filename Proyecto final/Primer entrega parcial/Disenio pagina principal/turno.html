@@ -4,9 +4,118 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Productos five barber</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/mainturnos.css">
+    <link rel="stylesheet" href="css/mainproductos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="js/min.js"></script>
 </head>
 <body>
-    <h1 style="font-size:100px">Coming soon!</h1>
+    <header class="header">
+        <section class="header-container">
+            <div class="header-logo">
+                <a href="index.html" class="logo"><img src="Imagenes/logo.jpg"></a>
+            </div>
+            <h1 class="header-titulo">Five 5 barber</h1>
+            <nav class="header-nav">
+                <a href="encontranos.html"> Encontranos </a>
+                <a href="turno.html">Reserva tu turno</a>
+                <a href="precios.html">Nuestros precios</a>
+                <a href="productos.html">Productos</a>
+            <div class="header-login">
+                <img src="images/">
+            </div>
+            </nav>
+    </header>
+    <main>
+        <div class="smart-wrap">
+            <div class="smart-forms smart-container wrap-2">
+              <div class="form-header header-primary">
+                <h4><i class="fa fa-calendar"></i>Reserva tu turno</h4>
+              </div>
+              <form method="post" action="/" id="contact">
+                <!-- Comienza el form -->
+                <div class="form-body">
+                    <!-- Nombre -->                 
+                    <div class="section">
+                        <label for="guestname" class="field-label">Please Enter Your Name</label>
+                        <label for="guestname" class="field prepend-icon">
+                          <input type="text" name="guestname" id="guestname" class="gui-input" required="" placeholder="John Doe/Jane Doe">
+                          <span class="field-icon"><i class="fa fa-user"></i></span>  
+                        </label>
+                      </div>
+
+                      <!-- correo electronico -->          
+                      <div class="frm-row">
+                        <div class="section colm colm6">
+                          <label for="guestemail" class="field-label">Email Address</label>
+                          <label for="guestemail" class="field prepend-icon">
+                            <input type="email" name="guestemail" id="guestemail" class="gui-input" required="" placeholder="john@something.com">
+                            <span class="field-icon"><i class="fa fa-envelope"></i></span>  
+                          </label>
+                        </div>
+                        <!-- Insertar numero de telefono -->
+                        <div class="section colm colm6">
+                          <label for="guestelephone" class="field-label">Telephone / Mobile</label>
+                          <label for="guestelephone" class="field prepend-icon">
+                            <input type="text" name="guestelephone" id="guestelephone" class="gui-input" required="" placeholder="Telephone / Moble Number">
+                            <span class="field-icon"><i class="fa fa-phone-square"></i></span>  
+                          </label>
+                        </div>
+                      </div>                                            
+                   
+                </div>
+                <div class="form-footer">
+                  <button type="submit" class="button btn-primary">Confirm Booking</button>
+                  <button type="reset" class="button">Cancel</button>
+                </div>
+                 
+              </form>
+               
+            </div>
+          </div>
+
+    </main>
+    <footer>
+        <section class="footer-container">
+            <div class="footer-content">
+                <div class="footer-nav">
+                    <nav>
+                        <ul class="footer-nav-list">
+                            <li><a href=""> Encontranos </a></li>
+                            <li><a href="">Reserva tu turno</a></li>
+                            <li><a href="">Nuestros precios</a></li>
+                            <li><a href="">Productos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer-logo">
+                    <a href="#"> 
+                        <img src="Imagenes/logo.jpg" alt="Logo Five Barber">
+                    </a>
+                </div>
+                <div class="footer-contact">
+                        <h1>Contactanos</h1>
+                        <a href="">
+                            <img src="Imagenes/instagram.png">
+                        </a>
+                        <a href="">
+                            <img src="Imagenes/tiktok.png">
+                        </a>
+                        <p>five5barber@gmail.com</p>
+                        <p>1341234321423</p>
+                </div>
+                </div>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>
