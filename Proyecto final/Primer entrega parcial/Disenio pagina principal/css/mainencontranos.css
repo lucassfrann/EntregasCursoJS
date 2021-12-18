@@ -1,0 +1,14 @@
+main {
+    background-image: url(../Imagenes/fondoproductos.jpg);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-height: 850px;
+}
+
+#mapa {
+    display: flex;
+    margin-left: 22%;
+    height: 630px;
+    width: 60%;
+    border: 1px solid black;
+}

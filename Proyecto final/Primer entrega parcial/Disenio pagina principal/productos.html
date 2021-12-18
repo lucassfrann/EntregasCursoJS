@@ -24,26 +24,32 @@
             <div class="header-logo">
                 <a href="index.html" class="logo"><img src="Imagenes/logo.jpg"></a>
             </div>
-            <h1 class="header-titulo">Five 5 barber</h1>
             <nav class="header-nav">
                 <a href="encontranos.html"> Encontranos </a>
                 <a href="turno.html">Reserva tu turno</a>
                 <a href="precios.html">Nuestros precios</a>
                 <a href="productos.html">Productos</a>
+            </nav>
             <div class="header-login">
                 <img src="Imagenes/usuario.png">
             </div>
-            </nav>
     </header>
     <main>
         <div class="main-header" >
             <h1 class="main-title">Nuestros productos</h1>
             <div class="main-container-carrito">
-                <img src="imagenes/carrito.png">
+                <div id="carrito-image">
+                    <p id="carrito-title">Click para abrir carrito</p>
+                    <img src="imagenes/carrito.png">
+                </div>
+                <div class="carrito-li-p" style="background-color: white; border: 3px solid black;">
                 <ul class="carrito-productos"></ul>
-                <p class="carrito-preciofinal">0 productos</p>
+                <p id="cantidad-productos">No agregaste ningun producto!</p>
+                <p class="carrito-preciofinal"></p>
                 <div class="main-container-delete">
-                    <img src="imagenes/tacho.png">
+                    <img id="tacho" src="imagenes/tacho.png">
+                    <img id="ojos" src="imagenes/ojos.png">
+                </div>
                 </div>
             </div>
         </div>

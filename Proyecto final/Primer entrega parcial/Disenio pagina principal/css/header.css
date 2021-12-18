@@ -25,20 +25,22 @@
 
 .header-logo {
     border: solid;
-
 }
 
-.header-titulo {
-    padding: 50px;
-    font-size: 30px;
-    font-family: 'Permanent Marker', cursive;
-    color: white;
-
+.header-login {
+    display: flex;
+    width: 75px;
+    height: 75px;
+    background-color: white;
 }
 
 .header-nav {
     padding: 56px;
+    margin-right: 100px;
+    width: 45%;
+    text-align: center;
     border: solid;
+    float: right;
 }
 
 .header-nav a {
