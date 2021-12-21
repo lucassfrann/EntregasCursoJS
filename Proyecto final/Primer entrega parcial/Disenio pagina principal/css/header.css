@@ -58,4 +58,16 @@
     border-bottom: 4px solid;
 }
 
+.container-login {
+    display: none;
+}
+
+.header-login {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2%;
+    margin-right: 30px;
+}
+
 /* FIN HEADER css */

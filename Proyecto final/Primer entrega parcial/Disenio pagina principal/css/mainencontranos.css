@@ -1,7 +1,7 @@
 main {
     background-image: url(../Imagenes/fondoproductos.jpg);
-    margin-top: 10px;
     margin-bottom: 10px;
+    margin-top: 10px;
     min-height: 850px;
 }
 
@@ -9,6 +9,22 @@ main {
     display: flex;
     margin-left: 22%;
     height: 630px;
-    width: 60%;
+    width: 58%;
     border: 1px solid black;
+}
+
+.container-title {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+}
+
+#title {
+    font-family: Oswald;
+    font-size: 60px;
+    margin: 10px;
+    text-shadow: 1px 0 0 #fff, 1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+
 }

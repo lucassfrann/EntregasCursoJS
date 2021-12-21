@@ -4,18 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encontranos</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/mainlogin.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/mainencontranos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <script src="js/min.js"></script>
+    <title>Document</title>
 </head>
 <body>
     <header class="header">
@@ -30,15 +28,22 @@
                 <a href="productos.html">Productos</a>
             </nav>
             <div class="header-login">
-                <img src="Imagenes/usuario.png">
-                <div class="container-login"></div>
+                <img id="imagen-login" src="Imagenes/usuario.png">
+                <div class="container-login">
+                </div>
             </div>
     </header>
     <main>
-        <div class="container-title"><h1 id="title">Aca nos encontramos!</h1> </div> 
-        <div>
-            <div id="mapa">
-            </div>
+        <div class="main-login">  	
+                <div class="login">
+                    <form>
+                        <label for="chk" aria-hidden="true" id="login-label">Five Barber</label>
+                        <input type="email" name="email" placeholder="Email" required="" id="email-input">
+                        <input type="password" name="pswd" placeholder="Password" required="" id="password-input">
+                        <button id="button">Iniciar Sesion</button>
+                    </form>
+                    <p id="text">No tenes cuenta?<a href="register.html"> registrate aca.</a></p>
+                </div>
         </div>
     </main>
     <footer>
@@ -74,12 +79,8 @@
             </div>
         </section>
     </footer>
-    <script src="js/encontranos.js"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnUVRk4YPABWWQjJIPDXAJFIEym-PlUnc&callback=initMap&v=weekly"
-      async
-    ></script>
-    <script src="js/header-login.js"></script>
     <script src="js/min.js"></script>
+    <script src="js/header-login.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>
