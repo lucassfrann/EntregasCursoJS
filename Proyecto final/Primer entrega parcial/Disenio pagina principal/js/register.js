@@ -1,27 +1,28 @@
-// const urljson2 = "data/datos.json";
+const urljson2 = "data/datos.json";
 
-// class datos {
-//     constructor(inputnombre, inputapellido, inputemail, inputcontraseña) {
-//         this.nombre = inputnombre;
-//         this.apellido = inputapellido;
-//         this.inputemail = inputemail;
-//         this.contraseña = inputcontraseña;
-//     }
-// }
+$("#button").click(function () {
 
-// let inputnombre = $('name-input').val()
-// let inputapellido = $('secondname-input').val()
-// let inputemail = $('email-input').val()
-// let inputcontraseña = $('password-input').val()
+    let inputnombre = document.getElementById('name-input').value;
+    let inputapellido = document.getElementById('secondname-input').value;
+    let inputemail = document.getElementById('email-input').value;
+    let inputpassword = document.getElementById('password-input').value;
 
-// $("#button").click(function () {
+    let info = {
+        nombre: inputnombre,
+        apellido: inputapellido,
+        email: inputemail,
+        password: inputpassword
+    }
 
-//     let info = []
-//     info.push(datos)
+    console.log(info);
 
-//     $.post(urljson2, info, function (data, status) {
-//         if (status === "success") {
-
-//         }
-//     })
-// })
+    $.ajax({
+        method: 'POST',
+        url: urljson2,
+        dataType: 'json',
+        data: info,
+        success: function (response) {
+            alert('datos enviados correctamente');
+        }
+    })
+})

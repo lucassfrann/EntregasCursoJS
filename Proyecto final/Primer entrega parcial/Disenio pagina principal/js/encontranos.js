@@ -1,16 +1,14 @@
-let map
-
-function initMap() {
-    var coord = {
-        lat: -34.6187014,
-        lng: -58.5165792
-    };
-    var map = new google.maps.Map(document.getElementById('mapa'), {
-        zoom: 15,
-        center: coord
+$("#title").click(function () {
+    $.ajax({
+        url: 'https://image.maps.ls.hereapi.com/mia/1.6/mapview',
+        type: 'GET',
+        data: {
+            c: '-34.6187014,-58.5165792',
+            z: '14',
+            apiKey: 'V8DoaXj-WLqZdEgO8UIOVacPFJElmAQ8D4vuS2S_gGY'
+        },
+        success: function (data) {
+            alert(JSON.stringify(data));
+        }
     });
-    var marker = new google.maps.Marker({
-        position: coord,
-        map: map
-    });
-}
+})

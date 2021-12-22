@@ -5,12 +5,16 @@ main {
     min-height: 850px;
 }
 
-#mapa {
+/* #mapa {
     display: flex;
     margin-left: 22%;
     height: 630px;
     width: 58%;
     border: 1px solid black;
+} */
+
+#mapa {
+    display: none;
 }
 
 .container-title {
