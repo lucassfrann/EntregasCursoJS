@@ -38,20 +38,25 @@
     <main>
         <div class="main-header" >
             <h1 class="main-title">Nuestros productos</h1>
-            <div class="main-container-carrito">
-                <div id="carrito-image">
-                    <p id="carrito-title">Click para abrir carrito</p>
-                    <img src="imagenes/carrito.png">
-                </div>
-                <div class="carrito-li-p" style="background-color: white; border: 3px solid black;">
+        </div>
+        <div class="main-container-carrito">
+            <div id="carrito-image">
+                <h2 id="carrito-title">Mi carrito</h2>
+            </div>
+            <div class="carrito-li-p" style="background-color: white; border: 3px solid black;">
+            <h3 id="carrito-title">Mi carrito</h3>
+            <div class="container-carrito">
                 <ul class="carrito-productos"></ul>
                 <p id="cantidad-productos">No agregaste ningun producto!</p>
                 <p class="carrito-preciofinal"></p>
-                <div class="main-container-delete">
-                    <img id="tacho" src="imagenes/tacho.png">
-                    <img id="ojos" src="imagenes/ojos.png">
+                <div id="finalizarpadre">
+                    <div id="finalizar"><p>Finalizar compra</p></div>
                 </div>
-                </div>
+            </div>
+            <div class="main-container-delete">
+                <div id="tacho"><p>Vaciar carrito</p></div>
+                 <div id="ocultar"><p>Cerrar X</p></div>
+            </div>
             </div>
         </div>
         <section class="main-container">
@@ -60,7 +65,7 @@
                 <img src="imagenes/stardust.png">
                 <div class="main-container-productos-mas">
                     <p class="precio-producto"><b>Precio</b></p>
-                    <div class="boton-agregar-producto-0"><img class="mas" src="imagenes/mas.png"></div>
+                    <div id="boton-agregar-producto-0" class="agregarproducto-button"><p>Agregar producto al carrito</p></div>
                 </div>
             </div>
             <div class="main-container-productos">
@@ -68,7 +73,7 @@
                 <img src="imagenes/desamarillador.png">
                 <div class="main-container-productos-mas">
                     <p class="precio-producto"><b>Precio</b></p>
-                    <div class="boton-agregar-producto-1"><img class="mas" src="imagenes/mas.png"></div>
+                    <div id="boton-agregar-producto-1" class="agregarproducto-button"><p>Agregar producto al carrito</p></div>
                 </div>
             </div>
             <div class="main-container-productos">
@@ -76,7 +81,7 @@
                 <img src="imagenes/cera.png">
                 <div class="main-container-productos-mas">
                     <p class="precio-producto"><b>Precio</b></p>
-                    <div class="boton-agregar-producto-2"><img class="mas" src="imagenes/mas.png"></div>
+                    <div id="boton-agregar-producto-2" class="agregarproducto-button"><p>Agregar producto al carrito</p></div>
                 </div>
             </div>
         </section>
