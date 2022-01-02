@@ -5,14 +5,6 @@ main {
     min-height: 850px;
 }
 
-/* #mapa {
-    display: flex;
-    margin-left: 22%;
-    height: 630px;
-    width: 58%;
-    border: 1px solid black;
-} */
-
 #mapa {
     display: none;
 }
