@@ -17,6 +17,9 @@ main {
 }
 
 .main-container-title {
+    font-family: Oswald;
+    color: #fff;
+    font-size: 50px;
     text-align: center;
     margin: 50px;
 }
