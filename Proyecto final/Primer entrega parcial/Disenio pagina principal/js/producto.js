@@ -32,20 +32,26 @@ function agregarProductoAlCarrito(producto) {
     if (newProducto) {
         newProducto.cantidadencarrito++
         let cantidadhtml = document.getElementById(`cantidad-producto${newProducto.id}`)
-        cantidadhtml.innerHTML = newProducto.cantidadencarrito
+        cantidadhtml.innerHTML = `x${newProducto.cantidadencarrito}`
     } else {
         newProducto = producto
         newProducto.cantidadencarrito = 1
         Carrito.push(newProducto)
-        $(".carrito-productos").append(`<div class="contenerdor-productos-carrito" id="producto-${newProducto.id}"><li class="productos-lista" style="background-color:white; text-decoration:none;">${newProducto.nombre}</li><p>$${newProducto.precio}</p><p id="cantidad-producto${newProducto.id}">${newProducto.cantidadencarrito}</p><div id="id-producto${newProducto.id}"><button class="boton-eliminar">x</button></div></div>`)
+        $(".carrito-productos").append(`<div class="contenerdor-productos-carrito" id="producto-${newProducto.id}">
+            <li class="productos-lista" style="background-color:white; text-decoration:none;">${newProducto.nombre}</li>
+            <p class="cantidad-productos" id="cantidad-producto${newProducto.id}">x${newProducto.cantidadencarrito}</p>
+            <p>$${newProducto.precio}</p>
+            <div><p class="boton-eliminar" id="boton-eliminar-${newProducto.id}">Eliminar</p></div>
+            </div>`)
+        $(`#boton-eliminar-${newProducto.id}`).click(() => {
+            removerProducto(newProducto)
+        })
     }
+
     let obJSON = JSON.stringify(Carrito)
     localStorage.setItem(`Productos`, obJSON)
     $("#cantidad-productos").hide()
     $("#finalizarpadre").show()
-    $('.boton-eliminar').click(() => {
-        removerProducto(newProducto)
-    })
     actualizarPrecioFinal()
     prueba++
     productoAgregado(prueba)
@@ -83,7 +89,7 @@ function vaciarCarrito() {
 function finalizarCompra() {
     if (finalizar == 0) {
         for (let i = 0; i < Carrito.length; i++) {
-            $('.modal-carrito').append(`<p class="modal-productos">${Carrito[i].nombre} ${Carrito[i].cantidadencarrito}</p>`)
+            $('.modal-carrito').append(`<p class="modal-productos">${Carrito[i].nombre} x${Carrito[i].cantidadencarrito}</p>`)
         }
         let preciofinal = actualizarPrecioFinal()
         $('.modal-carrito').append(`<p class="modal-productos" id="modal-preciofinal">Total: ${preciofinal}</p>`)
@@ -95,7 +101,6 @@ function finalizarCompra() {
 }
 
 function productoAgregado(prueba) {
-    console.log('entrando')
     if (prueba <= 1) {
         $('#carrito-image').append(`<p id='contador-carrito'>${prueba}</p>`)
     } else {
